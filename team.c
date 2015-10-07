@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "team.h"
 
 const char * const POSITIONS[] = {"QB1", "QB2", "RB1", "RB2",
@@ -30,7 +31,9 @@ Team get_away_team(unsigned char buffer[10000])
 Team populate_roster(unsigned char buffer[10000], Team team)
 {
     for (int i = 0 ; i < 25 ; i++){
-        /* make a player and put them on the roster */
+        Player player;
+        strcpy(player.pos, POSITIONS[i]); // Set position for player
+        team.roster[i] = player;
     }
     return team;
 }

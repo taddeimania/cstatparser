@@ -3,7 +3,6 @@
 #include "team.h"
 #include "player.h"
 
-
 int main(int argc, char *argv[])
 {
     unsigned char buffer[10000];
@@ -19,7 +18,7 @@ int main(int argc, char *argv[])
 
     /* team 1 */
     for(int i = 5781; i < 5781 + 261 ; i++) {
-        /* printf("Addr: %i, %u\n", i, buffer[i]); // prints a series of bytes */
+        /* printf("Addr: %i, %u\n", i, buffer[i]); */
     }
 
     printf("Home: %s\n", home_team.name);
@@ -28,6 +27,7 @@ int main(int argc, char *argv[])
     printf("%s\n", player1.first_name);
 
     populate_roster(buffer, home_team);
+    fclose(ptr);
 
     /* printf("NEXT TEAM\n"); */
 
