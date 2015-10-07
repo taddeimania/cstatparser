@@ -1,3 +1,5 @@
+#ifndef PLAYER_H
+#define PLAYER_H
 
 typedef struct {
     char pos[4];
@@ -9,3 +11,5 @@ typedef struct {
     int pr_yards, pr_tds, tackles, sacks, def_int, def_td, int_yards;
     int xp_attempts, xp, fg_attempts, fg, punts, punt_yards;
 } Player;
+
+#endif

@@ -1,6 +1,8 @@
+#include "player.h"
 
 typedef struct {
     char name[4];
+    Player roster[25];
 } Team;
 
 Team get_team(unsigned char buffer[10000], int offset);
