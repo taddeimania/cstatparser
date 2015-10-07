@@ -1,23 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 #include "team.h"
-
-struct Player {
-    char name[50];
-    char pos[4];
-};
+#include "player.h"
 
 
-int main()
+int main(int argc, char *argv[])
 {
-    char home[2];
     unsigned char buffer[10000];
     FILE *ptr;
-    char away[2];
     struct Player player1;
     struct Team home_team, away_team;
 
-    ptr = fopen("1.nst","rb");
+    ptr = fopen(argv[1],"rb");
 
     fread(buffer, sizeof(buffer), 1, ptr);
 
