@@ -17,9 +17,6 @@ int main(int argc, char *argv[])
     Team home_team = get_home_team(buffer);
     Team away_team = get_away_team(buffer);
 
-    home_team = get_home_team(buffer);
-    away_team = get_away_team(buffer);
-
     /* team 1 */
     for(int i = 5781; i < 5781 + 261 ; i++) {
         /* printf("Addr: %i, %u\n", i, buffer[i]); // prints a series of bytes */
