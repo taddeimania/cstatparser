@@ -9,11 +9,13 @@ int main(int argc, char *argv[])
     unsigned char buffer[10000];
     FILE *ptr;
     struct Player player1;
-    struct Team home_team, away_team;
 
-    ptr = fopen(argv[1],"rb");
+    ptr = fopen(argv[1], "rb");
 
     fread(buffer, sizeof(buffer), 1, ptr);
+
+    Team home_team = get_home_team(buffer);
+    Team away_team = get_away_team(buffer);
 
     home_team = get_home_team(buffer);
     away_team = get_away_team(buffer);
