@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
     unsigned char buffer[10000];
     FILE *ptr;
-    struct Player player1;
+    Player player1;
 
     ptr = fopen(argv[1], "rb");
 
@@ -24,8 +24,8 @@ int main(int argc, char *argv[])
 
     printf("Home: %s\n", home_team.name);
     printf("Away: %s\n", away_team.name);
-    strcpy(player1.name, "Joel");
-    printf("%s\n", player1.name);
+    strcpy(player1.first_name, "Joel");
+    printf("%s\n", player1.first_name);
 
     /* printf("NEXT TEAM\n"); */
 
