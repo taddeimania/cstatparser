@@ -1,14 +1,12 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
+#include "team.h"
 
 struct Player {
     char name[50];
     char pos[4];
 };
 
-struct Team {
-    char name[4];
-};
 
 int main()
 {
@@ -23,17 +21,8 @@ int main()
 
     fread(buffer, sizeof(buffer), 1, ptr);
 
-    /* home team name */
-    for(int i = 0; i <= sizeof(home) ; i++) {
-        home[i] = buffer[3087 + i];
-    }
-    strcpy(home_team.name, home);
-
-    /* away team name */
-    for(int i = 0; i <= sizeof(away) ; i++) {
-        away[i] = buffer[3087 + 32 + i];
-    }
-    strcpy(away_team.name, away);
+    home_team = get_home_team(buffer);
+    away_team = get_away_team(buffer);
 
     /* team 1 */
     for(int i = 5781; i < 5781 + 261 ; i++) {
