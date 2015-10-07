@@ -27,6 +27,8 @@ int main(int argc, char *argv[])
     strcpy(player1.first_name, "Joel");
     printf("%s\n", player1.first_name);
 
+    populate_roster(buffer, home_team);
+
     /* printf("NEXT TEAM\n"); */
 
     /* /1* team 2 *1/ */
