@@ -26,4 +26,8 @@ int main(int argc, char *argv[])
     printf("%i\n", home_team.roster[0].pass_attempts);
 
     fclose(ptr);
+    // DO NOT TRY TO ACCESS A ROSTER BELOW HERE!
+    clear_roster(&home_team);
+    clear_roster(&away_team);
+
 }

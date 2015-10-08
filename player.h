@@ -11,6 +11,7 @@ typedef struct {
 } Player;
 
 Player *new_player();
+void destroy_player(Player *);
 void add_stats(unsigned char *, Player *, int offset);
 
 #endif

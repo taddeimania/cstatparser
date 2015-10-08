@@ -29,6 +29,14 @@ Team get_away_team(unsigned char *buffer)
     return get_team(buffer, 32);
 }
 
+void clear_roster(Team *team)
+{
+    int roster_size = sizeof(team->roster) / sizeof(Player);
+    for (int i = 0 ; i < roster_size ; i++){
+        destroy_player(&team->roster[0]);
+    }
+}
+
 void populate_roster(unsigned char *buffer, Team *team, int offset)
 {
     int position_count = sizeof(POSITIONS) / sizeof(unsigned long);

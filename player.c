@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <assert.h>
 #include <stdlib.h>
 #include <string.h>
 #include "player.h"
@@ -8,6 +9,13 @@ Player *new_player()
 {
     Player *player = malloc(sizeof(Player));
     return player;
+}
+
+void destroy_player(Player *player)
+{
+    assert(player != NULL);
+
+    free(player);
 }
 
 void add_stats(unsigned char *buffer, Player *player, int offset)
