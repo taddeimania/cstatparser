@@ -32,9 +32,11 @@ Team get_away_team(unsigned char *buffer)
 void populate_roster(unsigned char *buffer, Team *team)
 {
     int position_count = sizeof(POSITIONS) / sizeof(unsigned long);
+
     for (int i = 0 ; i < position_count ; i++) {
         Player player;
         strcpy(player.pos, POSITIONS[i]); // Set position for player
+        add_stats(buffer, &player);
         team->roster[i] = player;
     }
 }
