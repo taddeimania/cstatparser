@@ -37,7 +37,6 @@ void populate_roster(unsigned char *buffer, Team *team, int offset)
         Player player;
         strcpy(player.pos, POSITIONS[i]); // Set position for player
         add_stats(buffer, &player, i + offset);
-        printf("%i\n", player.pass_attempts);
         team->roster[i] = player;
     }
 }
