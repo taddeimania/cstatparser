@@ -16,11 +16,14 @@ int main(int argc, char *argv[])
     Team home_team = get_home_team(buffer);
     Team away_team = get_away_team(buffer);
 
+
     printf("Home: %s\n", home_team.name);
     printf("Away: %s\n", away_team.name);
 
     populate_roster(buffer, &home_team, 0);
     populate_roster(buffer, &away_team, 261);
+    printf("%i\n", away_team.roster[0].pass_attempts);
+    printf("%i\n", home_team.roster[0].pass_attempts);
 
     fclose(ptr);
 }
