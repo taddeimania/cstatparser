@@ -9,9 +9,9 @@ typedef struct {
     Player roster[25];
 } Team;
 
-Team get_team(unsigned char buffer[10000], int offset);
-Team get_home_team(unsigned char buffer[10000]);
-Team get_away_team(unsigned char buffer[10000]);
-Team populate_roster(unsigned char buffer[10000], Team team);
+Team get_team(unsigned char *, int offset);
+Team get_home_team(unsigned char *);
+Team get_away_team(unsigned char *);
+Team populate_roster(unsigned char *, Team team);
 
 #endif

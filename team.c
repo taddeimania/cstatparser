@@ -9,7 +9,7 @@ const char * const POSITIONS[] = {"QB1", "QB2", "RB1", "RB2",
     "LCB", "FS", "SS", "K", "P"};
 
 
-Team get_team(unsigned char buffer[10000], int offset)
+Team get_team(unsigned char *buffer, int offset)
 {
     Team team;
 
@@ -19,17 +19,17 @@ Team get_team(unsigned char buffer[10000], int offset)
     return team;
 }
 
-Team get_home_team(unsigned char buffer[10000])
+Team get_home_team(unsigned char *buffer)
 {
     return get_team(buffer, 0);
 }
 
-Team get_away_team(unsigned char buffer[10000])
+Team get_away_team(unsigned char *buffer)
 {
     return get_team(buffer, 32);
 }
 
-Team populate_roster(unsigned char buffer[10000], Team team)
+Team populate_roster(unsigned char *buffer, Team team)
 {
     for (int i = 0 ; i < 1 ; i++){
         Player player;
