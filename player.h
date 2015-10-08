@@ -10,6 +10,7 @@ typedef struct {
     int xp_attempts, xp, fg_attempts, fg, punts, punt_yards;
 } Player;
 
+Player *new_player();
 void add_stats(unsigned char *, Player *, int offset);
 
 #endif
