@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     printf("Home: %s\n", home_team.name);
     printf("Away: %s\n", away_team.name);
 
-    populate_roster(buffer, home_team);
+    populate_roster(buffer, &home_team);
 
     fclose(ptr);
     /* /1* team 2 *1/ */

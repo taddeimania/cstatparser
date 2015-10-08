@@ -12,6 +12,6 @@ typedef struct {
 Team get_team(unsigned char *, int);
 Team get_home_team(unsigned char *);
 Team get_away_team(unsigned char *);
-Team populate_roster(unsigned char *, Team);
+void populate_roster(unsigned char *, Team *);
 
 #endif

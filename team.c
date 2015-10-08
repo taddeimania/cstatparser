@@ -29,12 +29,11 @@ Team get_away_team(unsigned char *buffer)
     return get_team(buffer, 32);
 }
 
-Team populate_roster(unsigned char *buffer, Team team)
+void populate_roster(unsigned char *buffer, Team *team)
 {
     for (int i = 0 ; i < 1 ; i++){
         Player player;
         strcpy(player.pos, POSITIONS[i]); // Set position for player
-        team.roster[i] = player;
+        team->roster[i] = player;
     }
-    return team;
 }
